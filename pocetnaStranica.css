@@ -1,0 +1,63 @@
+body{
+    background-color: #222629;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gorinjiCosak{
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    border-bottom-right-radius: 100%;
+    background-image: url("slike/pocetnaSlika.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 50px;
+    background-size: 50%;
+    background-color: #86C232;
+    box-shadow:  inset 0 0 10px #000000;
+    text-align: center;
+}
+
+.donjiCosak{
+    bottom: 13%;
+    right: 7%;
+    position: absolute;
+    text-align: right;
+    border-bottom-right-radius: 25px;
+    border-right: solid #86C232 1px;
+    margin-right: 10px;
+}
+
+.opis{
+    float: right;
+    position: relative;
+    right: 5%;
+    font-size: 180%;
+    font-style: italic;
+    font-weight: lighter;
+    color: #86C232 ;
+}
+
+.dugme{
+    position: relative;
+    bottom: 0%;
+    right: 10%;
+    color: #86C232 ;
+    background-color:#222629;
+    border: solid #86C232  1px;
+    border-radius: 25px;
+    font-style: italic;
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.dugme:hover{
+    color: #222629;
+    background-color: #86C232 ;
+    border: solid #222629 1px;
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizajniranje CVa</title>
+    <link rel="stylesheet" href="izborDizajna.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="izborDizajna.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h3 class="naslov">Kreiranje CVa</h3>
+    </div>
+    <div class="blok promjenaDizajna">
+        <div class="uredjivanje">
+            <label for="">Primarna boja:</label>
+            <input type="color" class="input" value="#009688" id="primarna" onchange="promjena()">
+            <br><br><br>
+            <label for="">Sekundarna boja:</label>
+            <input type="color" class="input" value="#009688" id="sekundarna" onchange="promjena()">
+        </div>
+        <div class="unosTexta">
+            <div class="slideshow">
+                <div class="slajdovi">
+                    <input type="radio" name="r" id="r1" checked="">
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slajd s1">
+                            <label>Fotografija (obavezan link sa ove stranice - <a href ="https://imgbb.com" target="_blank">KLIK</a>): </label>
+                            <input id="unesenaSlika" type="text" placeholder="https://i.ibb.co/xxxxxx/ime slike.format" onchange="unesi()"> <br> <br>
+                            <label>Ime i prezime: </label>
+                            <input id="unesenoImeIPrezime" type="text" placeholder="Jane Doe" onchange="unesi()"> <br> <br>
+                            <label>Zvanje: </label>
+                            <input id="unesenoZvanje" type="text" placeholder="Designer" onchange="unesi()"> <br> <br>
+                            <label>Prebivalište: </label>
+                            <input id="unesenoPrebivalište" type="text" placeholder="London, UK" onchange="unesi()"> <br> <br>
+                            <label>E-mail: </label>
+                            <input id="uneseniEMail" type="text" placeholder="ex@mail.com" onchange="unesi()"> <br> <br>
+                            <label>Broj: </label>
+                            <input id="uneseniBroj" type="text" placeholder="1224435534" onchange="unesi()"> <br> <br>
+                    </div>
+                    <div class="slajd">
+                            <label>Broj skillova za unos u CV (max 4):</label>
+                            <input id="uneseniBrojSkilova" type="number" min="1" max="4" onchange="brojSkillova()">
+                            <br> <br>
+                            <label>Ime skilla 1:</label>
+                            <input id="unesenoImeSkila1" type="text" placeholder="Adobe Photoshop" onchange="unesiSkill1()"> <label> Ocjena vještine:</label>
+                            <input id="unesenaOcjenaSkila1" type="number" min="1" max="100" placeholder="90" onchange="unesiSkill1()"><label>%</label> 
+                            <br> <br>
+                            <span id="uneseniskil2">
+                                <label>Ime skilla 2:</label>
+                                <input id="unesenoImeSkila2" type="text" placeholder="Photography" onchange="unesiSkill2()"> <label> Ocjena vještine:</label>
+                                <input id="unesenaOcjenaSkila2" type="number" min="1" max="100" placeholder="80" onchange="unesiSkill2()"><label>%</label> 
+                                <br> <br>
+                            </span>
+                            <span id="uneseniskil3">
+                                <label>Ime skilla 3:</label>
+                                <input id="unesenoImeSkila3" type="text" placeholder="Illustrator" onchange="unesiSkill3()"> <label> Ocjena vještine:</label>
+                                <input id="unesenaOcjenaSkila3" type="number" min="1" max="100" placeholder="75" onchange="unesiSkill3()"><label>%</label> 
+                                <br> <br>
+                            </span>
+                            <span id="uneseniskil4">
+                                <label>Ime skilla 4:</label>
+                                <input id="unesenoImeSkila4" type="text" placeholder="Media" onchange="unesiSkill4()"> <label> Ocjena vještine:</label>
+                                <input id="unesenaOcjenaSkila4" type="number" min="1" max="100" placeholder="50" onchange="unesiSkill4()"><label>%</label> 
+                                <br> <br>
+                            </span>
+                    </div>
+                    <div class="slajd">
+                        <label>Broj jezika za unos u CV (max 3):</label>
+                        <input id="uneseniBrojJezika" type="number" min="1" max="3" onchange="brojJezika()">
+                        <br> <br>
+                        <label>Jezik 1:</label>
+                        <input id="unesenoImeJezika1" type="text" placeholder="English" onchange="unesiJezik1()"> <label> Ocjena poznavanja:</label>
+                        <input id="unesenaOcjenaJezika1" type="number" min="1" max="100" placeholder="100" onchange="unesiJezik1()"><label>%</label> 
+                        <br> <br>
+                        <span id="uneseniJezik2">
+                            <label>Jezik 2:</label>
+                            <input id="unesenoImeJezika2" type="text" placeholder="Spanish" onchange="unesiJezik2()"> <label> Ocjena poznavanja:</label>
+                            <input id="unesenaOcjenaJezika2" type="number" min="1" max="100" placeholder="55" onchange="unesiJezik2()"><label>%</label> 
+                            <br> <br>
+                        </span>
+                        <span id="uneseniJezik3">
+                            <label>Jezik 3:</label>
+                            <input id="unesenoImeJezika3" type="text" placeholder="German" onchange="unesiJezik3()"> <label> Ocjena poznavanja:</label>
+                            <input id="unesenaOcjenaJezika3" type="number" min="1" max="100" placeholder="25" onchange="unesiJezik3()"><label>%</label> 
+                            <br> <br>
+                        </span>
+                    </div>
+                    <div class="slajd">
+                        <label>Broj obrazovnih ustanova za unos u CV (max 3):</label>
+                        <input id="uneseniBrojUstanova" type="number" min="1" max="3" onchange="brojUstanova()">
+                        <br><br>
+                        <span id="ustanova1">
+                            <label>Obrazovna ustanova 1:</label>
+                            <input id="unesenoImeUstanove1" type="text" placeholder="W3Schools.com" onchange="unesiUstanovu1()">
+                            <label>Zvanje:</label><input id="unesenoZvanjeUstanove1" type="text" placeholder="Web Development!" onchange="unesiUstanovu1()"><br> 
+                            <label> Trajanje:</label><input id="godPocetka1" type="number" value="2015" onchange="unesiUstanovu1()"> <input id="godKraja1" type="number" value="2019" onchange="unesiUstanovu1()">
+                            <br> <br>
+                        </span>
+                        <span id="ustanova2">
+                            <label>Obrazovna ustanova 2:</label>
+                            <input id="unesenoImeUstanove2" type="text" placeholder="London Business School" onchange="unesiUstanovu2()"> 
+                            <label>Zvanje:</label><input id="unesenoZvanjeUstanove2" type="text" placeholder="Master Degree" onchange="unesiUstanovu2()"><br> 
+                            <label> Trajanje:</label><input id="godPocetka2" type="number" value="2013" onchange="unesiUstanovu2()"> <input id="godKraja2" type="number" value="2015" onchange="unesiUstanovu2()">
+                            <br> <br>
+                        </span>
+                        <span id="ustanova3">
+                            <label>Obrazovna ustanova 3:</label>
+                            <input id="unesenoImeUstanove3" type="text" placeholder="School of Coding" onchange="unesiUstanovu3()"> 
+                            <label>Zvanje:</label><input id="unesenoZvanjeUstanove3" type="text" placeholder="Bachelor Degree" onchange="unesiUstanovu3()"><br> 
+                            <label> Trajanje:</label><input id="godPocetka3" type="number" value="2010" onchange="unesiUstanovu3()"> <input id="godKraja3" type="number" value="2013" onchange="unesiUstanovu3()"> 
+                        </span>
+                    </div>
+                    <div class="slajd">
+                        <label>Imate poslovno iskustvo:</label>
+                        <select id="iskustvo" onchange="iskustvo()">
+                            <option value="Da">Da</option>
+                            <option value="Ne">Ne</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div id="imaIskustvo">
+                        <label>Broj poslova za unos u CV (max 3):</label>
+                        <input id="uneseniBrojPoslova" type="number" min="1" max="3" onchange="brojPoslova()">
+                        <br><br>
+                        <span id="unosPosao1">
+                            <label>Posao 1:</label>
+                            <input id="unesenoImePosla1" type="text" placeholder="Front End Developer" onchange="unesiPosao1()">
+                            <label> Pozicija:</label><input id="unesenaPozicijaPosla1" type="text" placeholder="Lorem ipsum" onchange="unesiPosao1()"><br> 
+                            <label> Trajanje:</label>
+                            <select id="mjesecPocetkaPosla1" onchange="unesiPosao1()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="godPocetkaPosla1" type="number" value="2015" onchange="unesiPosao1()">
+                            <label for=""> - </label>
+                            <select id="mjesecKrajaPosla1" onchange="unesiPosao1()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select><input id="godKrajaPosla1" type="number" value="2018" onchange="unesiPosao1()">
+                            <br> <br>
+                        </span>
+                        <span id="unosPosao2">
+                            <label>Posao 2:</label>
+                            <input id="unesenoImePosla2" type="text" placeholder="Web Developer" onchange="unesiPosao2()">
+                            <label> Pozicija:</label><input id="unesenaPozicijaPosla2" type="text" placeholder="Consectetur adipisicing elit." onchange="unesiPosao2()"><br> 
+                            <label> Trajanje:</label>
+                            <select id="mjesecPocetkaPosla2" onchange="unesiPosao2()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="godPocetkaPosla2" type="number" value="2012" onchange="unesiPosao2()">
+                            <label for=""> - </label>
+                            <select id="mjesecKrajaPosla2" onchange="unesiPosao2()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="godKrajaPosla2" type="number" value="2014" onchange="unesiPosao2()">
+                            <br> <br>
+                        </span>
+                        <span id="unosPosao3">
+                            <label>Posao 3:</label>
+                            <input id="unesenoImePosla3" type="text" placeholder="Graphic Designer" onchange="unesiPosao3()">
+                            <label> Pozicija:</label><input id="unesenaPozicijaPosla3" type="text" placeholder="Lorem ipsum dolor sit amet" onchange="unesiPosao3()"><br> 
+                            <label> Trajanje:</label>
+                            <select id="mjesecPocetkaPosla3" onchange="unesiPosao3()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="godPocetkaPosla3" type="number" value="2010" onchange="unesiPosao3()">
+                            <label for=""> - </label>
+                            <select id="mjesecKrajaPosla3" onchange="unesiPosao3()">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="Maj">Maj</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="godKrajaPosla3" type="number" value="2012" onchange="unesiPosao3()">
+                        </span>
+                        </div>
+                    </div>
+                    <div class="navigacija">
+                        <label for="r1" class="bar"></label>
+                        <label for="r2" class="bar"></label>
+                        <label for="r3" class="bar"></label>
+                        <label for="r4" class="bar"></label>
+                        <label for="r5" class="bar"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="content" class="blok w3-light-grey1 pomak">
+            
+            <!-- Page Container -->
+            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+            
+            <!-- The Grid -->
+            <div class="w3-row-padding">
+            
+                <!-- Left Column -->
+                <div class="w3-third">
+                
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                    <img id="slika" src="slike/example.jpg" style="width:100%" alt="Avatar" id="slika">
+                    <div class="w3-display-bottomleft w3-container w3-text-black">
+                        <h2 id="imeiPrezime">Jane Doe</h2>
+                    </div>
+                    </div>
+                    <div class="w3-container">
+                    <p><i class="primarna fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal1"></i><span id="zamimanje">Designer</span></p>
+                    <p><i class="primarna fa fa-home fa-fw w3-margin-right w3-large w3-text-teal1"></i> <span id="mjestoPrebivališta">London, UK</span></p>
+                    <p><i class="primarna fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal1"></i><span id="email">ex@mail.com</span></p>
+                    <p><i class="primarna fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal1"></i><span id="brojTelefona">1224435534</span></p>
+                    <hr>
+            
+                    <p class="w3-large"><b><i class="primarna fa fa-asterisk fa-fw w3-margin-right w3-text-teal1"></i>Skills</b></p>
+                    <div id="skil1">
+                        <p id="skil1naziv">Adobe Photoshop</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div id="skil1posto" class="w3-container w3-center w3-round-xlarge w3-teal1" style="width:90%">90%</div>
+                        </div>
+                    </div>
+                    <div id="skil2">
+                        <p id="skil2naziv">Photography</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div id="skil2posto" class="w3-container w3-center w3-round-xlarge w3-teal1" style="width:80%">80%</div>
+                        </div>
+                    </div>
+                    <div id="skil3">
+                        <p id="skil3naziv">Illustrator</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div id="skil3posto" class="w3-container w3-center w3-round-xlarge w3-teal1" style="width:75%">75%</div>
+                        </div>
+                    </div>
+                    <div id="skil4">
+                        <p id="skil4naziv">Media</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div id="skil4posto" class="w3-container w3-center w3-round-xlarge w3-teal1" style="width:50%">50%</div>
+                        </div>
+                    </div>
+                    <br>
+            
+                    <p class="w3-large w3-text-theme"><b><i class="primarna fa fa-globe fa-fw w3-margin-right w3-text-teal1"></i>Languages</b></p>
+                    <div id="jezik1">
+                        <p id="jezik1naziv">English</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div id="jezik1posto" class="w3-round-xlarge w3-teal1" style="height:24px;width:100%"></div>
+                        </div>
+                    </div>
+                    <div id="jezik2">
+                        <p id="jezik2naziv">Spanish</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div id="jezik2posto" class="w3-round-xlarge w3-teal1" style="height:24px;width:55%"></div>
+                        </div>
+                    </div>
+                    <div id="jezik3">
+                        <p id="jezik3naziv">German</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div id="jezik3posto" class="w3-round-xlarge w3-teal1" style="height:24px;width:25%"></div>
+                        </div>
+                    </div>
+                    <br>
+                    </div>
+                </div><br>
+            
+                <!-- End Left Column -->
+                </div>
+            
+                <!-- Right Column -->
+                <div class="w3-twothird">
+                
+                <div id="radnoIskustvo" class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="primarna fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal1"></i>Work Experience</h2>
+                    <div id="posao1">
+                        <div class="w3-container">
+                        <h5 class="w3-opacity"><b id="posao1ime">Front End Developer</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="posao1datum">Jan 2015 - Oct 2018</span></h6>
+                        <p id="posao1zvanje">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>  
+                        </div>
+                    </div>
+                    <div id="posao2">
+                        <hr>
+                        <div class="w3-container">
+                        <h5 class="w3-opacity"><b id="posao2ime">Web Developer</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="posao2datum">Mar 2012 - Dec 2014</span></h6>
+                        <p id="posao2zvanje">Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                        </div>
+                    </div>
+                    <div id="posao3">
+                        <hr>
+                        <div class="w3-container">
+                        <h5 class="w3-opacity"><b id="posao3ime">Graphic Designer</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="posao3datum">Jun 2010 - Mar 2012</span></h6>
+                        <p id="posao3zvanje">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="primarna fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal1"></i>Education</h2>
+                    <div id="edukacija1">
+                        <div class="w3-container">
+                        <h5 class="w3-opacity"><b id="edukacija1ime">W3Schools.com</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="edukacija1datum">2015 - 2019</span></h6>
+                        <p id="edukacija1zvanje">Web Development! All I need to know in one place</p>
+                        </div>
+                    </div>
+                    <div id="edukacija2">
+                        <div class="w3-container">
+                        <hr>
+                        <h5 class="w3-opacity"><b id="edukacija2ime">London Business School</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="edukacija2datum">2013 - 2015</span></h6>
+                        <p id="edukacija2zvanje">Master Degree</p>
+                        </div>
+                    </div>
+                    <div id="edukacija3">
+                        <div class="w3-container">
+                        <hr>
+                        <h5 class="w3-opacity"><b id="edukacija3ime">School of Coding</b></h5>
+                        <h6 class="primarna w3-text-teal1"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="edukacija3datum">2010 - 2013</span></h6>
+                        <p id="edukacija3zvanje">Bachelor Degree</p><br>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- End Right Column -->
+                </div>
+                
+            <!-- End Grid -->
+            </div>
+            
+            <!-- End Page Container -->
+            </div>
+    </div>
+</body>
+</html>

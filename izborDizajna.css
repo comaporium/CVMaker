@@ -1,0 +1,182 @@
+body{
+    background-color: #222629;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+.blok{
+    display: block;
+}
+
+.header{
+    background-color: #86C232;
+    top: 0px;
+}
+
+.naslov{
+    text-align: center;
+    display: block;
+    color:#222629;
+    font-size: 30px;
+}
+
+.promjenaDizajna{
+    margin-left: 5%;
+    top: 20%;
+    left: 0%;
+    position: absolute;
+    width: 90%;
+    height: 480px;
+    border-radius: 25px;
+    border:#86C232 solid 3px;
+    margin-bottom: 5%;
+    padding-bottom: 30px;
+    display:block;
+}
+
+.unosTexta{
+    top: 2%;
+    width: 60%;
+    padding: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    right: 0%;
+    text-align: right;
+}
+
+.pomak{
+    margin-top: 50%;
+    padding-top: 3%;
+    display: block;
+}
+
+.w3-light-grey1{
+    background-color: #222629;
+    color: #000;
+}
+
+.w3-text-teal1{
+    color: #009688;
+}
+.w3-teal1{
+    color: #fff;
+    background-color: #009688;
+}
+
+.uredjivanje{
+    width: 30%;
+    padding: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-right:#86C232 solid 1px ;
+}
+label{
+    color: #86C232;
+    font-style: italic;
+}
+
+input{
+    border-radius: 25px;
+    border:#86C232 solid 1px;
+    text-align: center;
+}
+
+.dugme{
+    border-radius: 25px;
+    color: #86C232;
+    background-color: #222629;
+    border:#86C232 solid 3px;
+    padding: 5px;
+}
+
+.dugme:hover{
+    color: #222629;
+    background-color: #86C232;
+    border:#222629 solid 3px;
+}
+
+.w3-badge1,.w3-tag1{
+    display:inline-block;
+    padding-left:8px;
+    padding-right:8px;
+    text-align:center
+}
+.w3-badge1{
+    border-radius:50%
+}
+
+.slideshow{
+    top: 10px;
+    width: 690px;
+    height: 360px;
+    overflow: hidden;
+    box-shadow:0 0 20px -10px #000;
+    border-radius: 25px;
+}
+
+.navigacija{
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    left: 40%;
+}
+
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #86C232;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.bar:hover{
+    background: #86C232;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slajdovi{
+    width: 500%;
+    height: 100%;
+    display:flex;
+    
+}
+
+.slajd{
+    width: 20%;
+    transition: 0.6s;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.slajd div{
+    width: 690px;
+    height: 490px;
+    border-radius: 25px;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
